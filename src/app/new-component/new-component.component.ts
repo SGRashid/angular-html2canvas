@@ -15,11 +15,11 @@ export class NewComponentComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  // @ViewChild('screen') screen: ElementRef;
-  @ViewChild('canvas') canvas: ElementRef | undefined = undefined;
-  @ViewChild('downloadLink') downloadLink: ElementRef | undefined = undefined;
+  @ViewChild('canvas') canvas: ElementRef;
+  @ViewChild('downloadLink') downloadLink: ElementRef;
 
   makeScreenShot(): void {
+    this.isOn = !this.isOn;
     html2canvas(document.body)
       .then(canvas => {
         this.canvas.nativeElement.src = canvas.toDataURL();
