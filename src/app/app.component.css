@@ -1,0 +1,10 @@
+ul {
+    display: flex;
+    flex-direction: row;
+}
+
+li {
+    margin-left: 30px;
+    font-size: 26px;
+    list-style-type: none;
+}

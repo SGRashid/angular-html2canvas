@@ -1,1 +1,12 @@
-<p>promise works!</p>
+<button (click)="makeScreenShot()">Сделать скриншот</button>
+<div
+    class="indicator"
+    *ngIf="!isOn"
+>
+    <span>ON</span>
+</div>
+
+<div id="download">
+    <img #canvas>
+    <a #downloadLink></a>
+</div>

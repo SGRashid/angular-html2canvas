@@ -6,6 +6,7 @@ import { PromiseComponent } from './promise/promise.component';
 const routes: Routes = [
   { path: '', component: NewComponentComponent },
   { path: 'promise', component: PromiseComponent },
+  { path: 'css', component: PromiseComponent },
 ];
 
 @NgModule({

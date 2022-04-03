@@ -1,4 +1,4 @@
-import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { Component, ElementRef, ViewChild } from '@angular/core';
 import html2canvas from 'html2canvas';
 
 @Component({
@@ -6,20 +6,16 @@ import html2canvas from 'html2canvas';
   templateUrl: './new-component.component.html',
   styleUrls: ['./new-component.component.css']
 })
-export class NewComponentComponent implements OnInit {
+export class NewComponentComponent {
 
   constructor() { }
 
   isOn = false;
 
-  ngOnInit(): void {
-  }
-
   @ViewChild('canvas') canvas: ElementRef;
   @ViewChild('downloadLink') downloadLink: ElementRef;
 
   makeScreenShot(): void {
-    this.isOn = !this.isOn;
     html2canvas(document.body)
       .then(canvas => {
         this.canvas.nativeElement.src = canvas.toDataURL();
@@ -28,5 +24,4 @@ export class NewComponentComponent implements OnInit {
         this.downloadLink.nativeElement.click();
       })
   }
-
 }

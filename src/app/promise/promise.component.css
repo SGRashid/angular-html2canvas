@@ -1,0 +1,15 @@
+.indicator {
+    background-color: deepskyblue;
+    width: 200px;
+    height: 100px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 26px;
+    font-weight: bold;
+}
+
+#download {
+    display: none;
+}
