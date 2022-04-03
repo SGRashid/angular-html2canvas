@@ -1,0 +1,13 @@
+<button (click)="makeScreenShot()">Сделать скриншот</button>
+<button (click)="isOn = !isOn">on/off</button>
+<div
+    class="indicator"
+    *ngIf="!isOn"
+>
+    ON
+</div>
+
+<div id="download">
+    <img #canvas>
+    <a #downloadLink></a>
+</div>

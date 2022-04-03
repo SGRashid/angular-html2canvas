@@ -1,0 +1,10 @@
+.indicator {
+    background-color: rgb(176, 44, 44);
+    width: 200px;
+    height: 100px;
+    color: white;
+}
+
+#download {
+    display: none;
+}
