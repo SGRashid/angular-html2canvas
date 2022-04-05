@@ -16,6 +16,8 @@ export class ScreenshotService {
         a.href = canvas.toDataURL("image/jpeg").replace("image/jpeg", "image/octet-stream");
         a.download = 'somefilename.jpg';
         a.click();
+
+        document.body.appendChild(canvas);
       })
   }
   

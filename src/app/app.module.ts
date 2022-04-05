@@ -6,13 +6,15 @@ import { AppComponent } from './app.component';
 import { NewComponentComponent } from './new-component/new-component.component';
 import { PromiseComponent } from './promise/promise.component';
 import { CssComponent } from './css/css.component';
+import { IframeComponent } from './iframe/iframe.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NewComponentComponent,
     PromiseComponent,
-    CssComponent
+    CssComponent,
+    IframeComponent
   ],
   imports: [
     BrowserModule,
