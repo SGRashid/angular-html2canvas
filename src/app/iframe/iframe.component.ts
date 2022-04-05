@@ -1,15 +1,16 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { ScreenshotService } from '../screenshot.service';
 
 @Component({
   selector: 'app-iframe',
   templateUrl: './iframe.component.html',
   styleUrls: ['./iframe.component.css']
 })
-export class IframeComponent implements OnInit {
+export class IframeComponent {
 
-  constructor() { }
+  constructor(public screenshotService: ScreenshotService) { }
 
-  ngOnInit(): void {
+  makeScreenshot(): void {
+    this.screenshotService.makeScreenshot();
   }
-
 }

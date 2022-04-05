@@ -1,1 +1,7 @@
-<p>iframe works!</p>
+<button (click)="makeScreenshot()">Make a screenshot</button>
+<iframe
+    srcdoc="<h1>Title</h1>"
+    width="500"
+    height="500"
+    sandbox="allow-forms allow-scripts"
+></iframe>
