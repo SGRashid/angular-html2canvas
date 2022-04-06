@@ -1,7 +1,9 @@
-<button (click)="makeScreenshot()">Make a screenshot</button>
-<iframe
-    srcdoc="<h1>Title</h1>"
-    width="500"
-    height="500"
-    sandbox="allow-forms allow-scripts"
-></iframe>
+<div class="iframe-container">
+    <button (click)="makeScreenshot()">Make a screenshot</button>
+    <button (click)="makeIframeScreenshot()">Make a screenhot of iframe</button>
+    <iframe
+        srcdoc="<h1>Title</h1>"
+        width="500"
+        height="500"
+    ></iframe>
+</div>

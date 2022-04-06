@@ -20,5 +20,11 @@ export class ScreenshotService {
         document.body.appendChild(canvas);
       })
   }
+
+  makeIframeScreenshot(el: HTMLElement): void {
+    // @ts-ignore
+    html2canvas(el.contentWindow.document.body)
+      .then(canvas => document.body.appendChild(canvas));
+  } 
   
 }
