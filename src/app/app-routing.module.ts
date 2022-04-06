@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { CssComponent } from './css/css.component';
+import { IframeCase2Component } from './iframe-case2/iframe-case2.component';
 import { IframeComponent } from './iframe/iframe.component';
 import { NewComponentComponent } from './new-component/new-component.component';
 import { PromiseComponent } from './promise/promise.component';
@@ -10,6 +11,7 @@ const routes: Routes = [
   { path: 'promise', component: PromiseComponent },
   { path: 'css', component: CssComponent },
   { path: 'iframe', component: IframeComponent },
+  { path: 'iframe2', component: IframeCase2Component },
 ];
 
 @NgModule({

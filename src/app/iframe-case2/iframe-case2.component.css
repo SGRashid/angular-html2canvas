@@ -1,0 +1,9 @@
+.iframe-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.iframe-container button {
+    margin-bottom: 25px;
+    width: 200px;
+}
