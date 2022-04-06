@@ -13,9 +13,4 @@ export class IframeComponent {
   makeScreenshot(): void {
     this.screenshotService.makeScreenshot();
   }
-
-  makeIframeScreenshot(): void {
-    const iframe = document.getElementsByTagName('iframe')[0];
-    this.screenshotService.makeIframeScreenshot(iframe);
-  }
 }
