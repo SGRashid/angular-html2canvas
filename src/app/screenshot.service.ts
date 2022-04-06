@@ -9,11 +9,12 @@ export class ScreenshotService {
   constructor() { }
 
   makeScreenshot(): void {
-    html2canvas(document.body)
-      .then(canvas => {
-        // this.#downloadImage(canvas);
-        this.#showImage(canvas);
-      })
+    html2canvas(document.body).then(this.#createImage);
+  }
+
+  #createImage = (canvas: HTMLCanvasElement): void => {
+    // this.#downloadImage(canvas);
+    this.#showImage(canvas);
   }
 
   #downloadImage = (canvas: HTMLCanvasElement): void => {
@@ -24,5 +25,7 @@ export class ScreenshotService {
     fakeElement.click();
   }
 
-  #showImage = (canvas: HTMLCanvasElement): void => void document.body.appendChild(canvas);
+  #showImage = (canvas: HTMLCanvasElement): void => {
+    document.body.appendChild(canvas);
+  }
 }
