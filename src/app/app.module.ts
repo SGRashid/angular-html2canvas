@@ -8,6 +8,7 @@ import { PromiseComponent } from './promise/promise.component';
 import { CssComponent } from './css/css.component';
 import { IframeComponent } from './iframe/iframe.component';
 import { IframeCase2Component } from './iframe-case2/iframe-case2.component';
+import { ShadowDomComponent } from './shadow-dom/shadow-dom.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { IframeCase2Component } from './iframe-case2/iframe-case2.component';
     PromiseComponent,
     CssComponent,
     IframeComponent,
-    IframeCase2Component
+    IframeCase2Component,
+    ShadowDomComponent
   ],
   imports: [
     BrowserModule,

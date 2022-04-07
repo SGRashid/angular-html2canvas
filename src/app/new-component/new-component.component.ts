@@ -1,4 +1,4 @@
-import { Component, ElementRef, ViewChild } from '@angular/core';
+import { AfterContentInit, Component, ElementRef, ViewChild } from '@angular/core';
 import html2canvas from 'html2canvas';
 import { ScreenshotService } from '../screenshot.service';
 
@@ -7,7 +7,7 @@ import { ScreenshotService } from '../screenshot.service';
   templateUrl: './new-component.component.html',
   styleUrls: ['./new-component.component.css']
 })
-export class NewComponentComponent {
+export class NewComponentComponent implements AfterContentInit {
 
   constructor(public screenshotService: ScreenshotService) { }
 
@@ -16,7 +16,13 @@ export class NewComponentComponent {
   @ViewChild('canvas') canvas: ElementRef;
   @ViewChild('downloadLink') downloadLink: ElementRef;
 
-  makeScreenShot(): void {
+  ngAfterContentInit(): void {
+    // document.body.addEventListener("DOMSubtreeModified", function() {
+    //   console.error('modified!');
+    // });
+  }
+
+  makeScreenShot = (): void => {
     // html2canvas(document.body)
     //   .then(canvas => {
     //     this.canvas.nativeElement.src = canvas.toDataURL();

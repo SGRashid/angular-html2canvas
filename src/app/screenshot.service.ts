@@ -13,8 +13,8 @@ export class ScreenshotService {
   }
 
   #createImage = (canvas: HTMLCanvasElement): void => {
-    // this.#downloadImage(canvas);
-    this.#showImage(canvas);
+    this.#downloadImage(canvas);
+    // this.#showImage(canvas);
   }
 
   #downloadImage = (canvas: HTMLCanvasElement): void => {
